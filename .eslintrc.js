@@ -1,9 +1,9 @@
-import globals from 'globals'
-
 module.exports = {
   "env": {
     "browser": true,
     "es6": true,
+    "node": true,
+    "es2021": true,
     "jest/globals": true
   },
   "extends": [
@@ -15,18 +15,14 @@ module.exports = {
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "commonjs",
-"globals":
-{
-...globals.node,
-}
+    "sourceType": "module",
   },
   "plugins": [
     "react", "jest"
   ],
   "rules": {
     "indent": [
-      "error",
+      "off",
         2
       ],
     "linebreak-style": [
@@ -34,15 +30,15 @@ module.exports = {
       "unix"
     ],
     "quotes": [
-      "error",
+      "off",
       "single"
     ],
     "semi": [
-      "error",
+      "off",
       "never"
     ],
     "eqeqeq": "error",
-    "no-trailing-spaces": "error",
+    "no-trailing-spaces": "off",
     "object-curly-spacing": [
       "error", "always"
     ],
@@ -50,6 +46,7 @@ module.exports = {
       "error", { "before": true, "after": true }
     ],
     "no-console": "error",
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "no-unused-vars":["off"]
   }
 }
