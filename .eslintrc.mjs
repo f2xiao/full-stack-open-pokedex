@@ -1,3 +1,5 @@
+import globals from 'globals'
+
 module.exports = {
   "env": {
     "browser": true,
@@ -12,8 +14,12 @@ module.exports = {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "ecmaVersion": "latest",
+    "sourceType": "commonjs",
+"globals":
+{
+...globals.node,
+}
   },
   "plugins": [
     "react", "jest"
