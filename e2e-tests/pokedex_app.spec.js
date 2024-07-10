@@ -7,7 +7,7 @@ describe('Pokedex', () => {
     await expect(page.getByText('Pokémon and Pokémon character names are trademarks of Nintendo.')).toBeVisible()
   })
 
-  test('pokemon page can be navigated to', async ({ page }) =>{
+  test('pokemon page can be navigated to', async ({ page }) => {
    await page.goto('')
    await page.click('a[href="/pokemon/ivysaur"]')
    await page.waitForLoadState('networkidle')
